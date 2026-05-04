@@ -4,6 +4,6 @@ export const getProductList = () => {
   return apiClient({ method: 'GET', url: '/public/randomproducts' });
 }
 
-export const getProduct = ({ productId }) => {
+export const getProduct = ({ productId }: { productId: string }) => {
   return apiClient({ method: 'GET', url: `/public/randomproducts/${productId}`, });
 }

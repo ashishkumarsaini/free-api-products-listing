@@ -12,6 +12,9 @@ const api = axios.create({
 export const apiClient = async ({
   method = "GET",
   url,
+}: {
+  method?: string;
+  url: string;
 }) => {
   try {
     const response = await api({
@@ -20,8 +23,9 @@ export const apiClient = async ({
     });
 
     return response.data;
-  } catch (error) {
-    console.error("API Error:", error.message);
-    throw error.message;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    console.error("API Error:", error?.message);
+    throw error?.message || "An unknown error occurred";
   }
 };
