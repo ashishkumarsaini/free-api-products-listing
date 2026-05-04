@@ -1,3 +1,6 @@
+import { createFileRoute } from "@tanstack/react-router";
+
+// eslint-disable-next-line react-refresh/only-export-components
 const ProductsPage = () => {
   return (
     <div className="bg-white">
@@ -71,4 +74,7 @@ const ProductsPage = () => {
   )
 };
 
-export default ProductsPage;
+export const Route = createFileRoute('/products/')({
+  component: ProductsPage,
+})
+
