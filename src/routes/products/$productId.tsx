@@ -70,7 +70,7 @@ function ProductPage() {
   return (
     <div className='mt-[100px]'>
       <div className="md:grid grid-cols-12 gap-8 md:items-start">
-        <div className="col-span-12 md:col-span-5 md:sticky top-20" id="product-details">
+        <div className="col-span-12 md:col-span-5 md:sticky top-30" id="product-details">
           <div className='flex items-center gap-2 text-sm'>
             <Link to='/products' className='text-gray-500 capitalize'>{category}</Link>
             <p className='text-gray-500'>/</p>
